@@ -1,0 +1,15 @@
+{ = Identificador
+123.45e-8 = Identificador
+radioDeLaCircunferencia = Identificador
+= = Identificador
+45 = Identificador
+; = Identificador
++ = Identificador
++ = Identificador
++ = Identificador
+- = Identificador
+- = Identificador
+- = Identificador
+# = Identificador
+} = Identificador
+￿ = Identificador
