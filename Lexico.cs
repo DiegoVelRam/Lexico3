@@ -101,8 +101,24 @@ namespace LYA1_Lexico3
                 return 13;
             else if (c=='%')
                 return 14;    
+            else if (c=='*')
+                return 15;
+            else if (c=='?')
+                return 16;
+            else if (c=='"')
+                return 17;
+            else if (c=='/')
+                return 18;
+            else if (c=='{')
+                return 19;
+            else if (c=='}')
+                return 20;
+            else if (c=='EOL')
+                return 21;
+            else if (c=='EOF')
+                return 22;
             else
-                return 7;
+                return 23;
             
         }
    private void clasificar(int estado)
