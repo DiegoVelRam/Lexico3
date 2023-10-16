@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\juani\\OneDrive\\Documentos\\LYA1_Lexico3\\Lexico3\\LYA1_Lexico3.csproj": {}
+    "C:\\Users\\juani\\OneDrive\\Documentos\\Lexico3\\LYA1_Lexico3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\juani\\OneDrive\\Documentos\\LYA1_Lexico3\\Lexico3\\LYA1_Lexico3.csproj": {
+    "C:\\Users\\juani\\OneDrive\\Documentos\\Lexico3\\LYA1_Lexico3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juani\\OneDrive\\Documentos\\LYA1_Lexico3\\Lexico3\\LYA1_Lexico3.csproj",
+        "projectUniqueName": "C:\\Users\\juani\\OneDrive\\Documentos\\Lexico3\\LYA1_Lexico3.csproj",
         "projectName": "LYA1_Lexico3",
-        "projectPath": "C:\\Users\\juani\\OneDrive\\Documentos\\LYA1_Lexico3\\Lexico3\\LYA1_Lexico3.csproj",
+        "projectPath": "C:\\Users\\juani\\OneDrive\\Documentos\\Lexico3\\LYA1_Lexico3.csproj",
         "packagesPath": "C:\\Users\\juani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juani\\OneDrive\\Documentos\\LYA1_Lexico3\\Lexico3\\obj\\",
+        "outputPath": "C:\\Users\\juani\\OneDrive\\Documentos\\Lexico3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\juani\\AppData\\Roaming\\NuGet\\NuGet.Config"
