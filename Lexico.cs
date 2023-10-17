@@ -1,3 +1,5 @@
+using System.Security.Principal;
+using System.Security.Cryptography;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -113,12 +115,12 @@ namespace LYA1_Lexico3
                 return 19;
             else if (c=='}')
                 return 20;
-          /*  else if (c=='EOL')
-                return 21;
-            else if (c=='EOF')
-                return 22;*/
+            else if (c=='\n')
+                return 0;
+            else if (FinArchivo())
+                return 22;
             else
-                return 23;
+                return 27;
             
         }
    private void clasificar(int estado)
@@ -180,14 +182,14 @@ namespace LYA1_Lexico3
             }
             if (estado == E)
             {
-                if(char.IsDigit(c))
+              if(getClasificacion() == Tipos.Numero)
                 {
                     throw new Error("Lexico: Se espera un digito",log);
                 }
             }
             else
             {
-                throw new Error("Lexico: Error de linea",log);
+                throw new Error("Lexico: Error no se cerro cadena",log);
             }
             setContenido(buffer);
             log.WriteLine(getContenido() + " = " + getClasificacion());
