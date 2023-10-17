@@ -1,1 +1,37 @@
-Error Lexico: Error no se cerro cadena
+{ = IniLlave
+// Prueba de fuego
+x26=3.141592/**++ = IncrementoTermino
++ = OperadorTermino
+/ = OperadorFactor
+* = OperadorFactor
+* = OperadorFactor
+* = OperadorFactor
+/ = OperadorFactor
+-- = IncrementoTermino
+- = OperadorTermino
+/ = OperadorFactor
+* = OperadorFactor
+* = OperadorFactor
+* = OperadorFactor
+* = OperadorFactor
+/ = OperadorFactor
+&& = OperadorLogico
+& = Caracter
+|| = OperadorLogico
+| = Caracter
+== = OperadorRelacional
+= = Asignacion
+! = OperadorLogico
+!= = OperadorRelacional
+= = Asignacion
+//Test
+<<<>>>"Hola mundo";/*Cadena Vacia*"" = Cadena
+; = FinSentencia
++= = IncrementoTermino
+-= = IncrementoTermino
+*= = IncrementoFactor
+/= = IncrementoFactor
+%= = IncrementoFactor
+} = FinLlave
+"" = Cadena
+. = Caracter

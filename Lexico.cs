@@ -187,10 +187,10 @@ namespace LYA1_Lexico3
                     throw new Error("Lexico: Se espera un digito",log);
                 }
             }
-            else
+            /*else
             {
                 throw new Error("Lexico: Error no se cerro cadena",log);
-            }
+            }*/
             setContenido(buffer);
             log.WriteLine(getContenido() + " = " + getClasificacion());
         }
