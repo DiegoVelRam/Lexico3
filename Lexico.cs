@@ -113,10 +113,10 @@ namespace LYA1_Lexico3
                 return 19;
             else if (c=='}')
                 return 20;
-            else if (c=='EOL')
+          /*  else if (c=='EOL')
                 return 21;
             else if (c=='EOF')
-                return 22;
+                return 22;*/
             else
                 return 23;
             
@@ -134,18 +134,18 @@ namespace LYA1_Lexico3
                 case 12: setClasificacion(Tipos.Caracter); break;
                 case 13: setClasificacion(Tipos.OperadorLogico); break;
                 case 14: setClasificacion(Tipos.OperadorLogico); break;
-                case 15; setClasificacion(Tipos.OperadorRelacional); break;
-                case 16; setClasificacion(Tipos.OperadorRelacional); break;
-                case 17; setClasificacion(Tipos.OperadorRelacional); break;
-                case 19; setClasificacion(Tipos.OperadorTermino); break;
-                case 20; setClasificacion(Tipos.OperadorTermino); break;
-                case 21; setClasificacion(Tipos.IncrementoTermino); break;
-                case 22; setClasificacion(Tipos.OperadorFactor); break;
-                case 23; setClasificacion(Tipos.IncrementoFactor); break;
-                case 24; setClasificacion(Tipos.OperadorTernario); break;
-                case 25; setClasificacion(Tipos.Cadena); break;
-                case 26; setClasificacion(Tipos.Cadena); break;
-                case 28; setClasificacion(Tipos.OperadorFactor); break;
+                case 15: setClasificacion(Tipos.OperadorRelacional); break;
+                case 16: setClasificacion(Tipos.OperadorRelacional); break;
+                case 17: setClasificacion(Tipos.OperadorRelacional); break;
+                case 19: setClasificacion(Tipos.OperadorTermino); break;
+                case 20: setClasificacion(Tipos.OperadorTermino); break;
+                case 21: setClasificacion(Tipos.IncrementoTermino); break;
+                case 22: setClasificacion(Tipos.OperadorFactor); break;
+                case 23: setClasificacion(Tipos.IncrementoFactor); break;
+                case 24: setClasificacion(Tipos.OperadorTernario); break;
+                case 25: setClasificacion(Tipos.Cadena); break;
+                case 26: setClasificacion(Tipos.Cadena); break;
+                case 28: setClasificacion(Tipos.OperadorFactor); break;
                 case 27: setClasificacion(Tipos.Caracter); break;
                 
             }
