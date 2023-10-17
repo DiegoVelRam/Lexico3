@@ -11,7 +11,8 @@ namespace LYA1_Lexico3
         {
              Identificador, Numero, Caracter/* &, |  LISTO */, Asignacion, FinSentencia, LlaveIncio, LlaveFin,
             OperadorRelacional/*==, !=, <=, >=, <,>  LISTO */,  OperadorLogico/*&&, ||, !  LISTO */    , OperadorTermino/* +,-  LISTO*/,  
-            OperadorFactor/* /,*,% LISTO*/, IncrementoTermino/*++, --,+=,-= LISTO*/, IncrementoFactor/**=,/=,%= LISTO*/,  cadena /*\"*/,  
+            OperadorFactor/* /,*,% LISTO*/, IncrementoTermino/*++, --,+=,-= LISTO*/, IncrementoFactor/**=,/=,%= LISTO*/,  Cadena /*\"*/,  
+            OperadorTernario /*?*/,
             
         }
         private string contenido;
