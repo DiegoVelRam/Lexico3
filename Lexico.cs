@@ -146,6 +146,11 @@ namespace LYA1_Lexico3
                 case 25: setClasificacion(Tipos.Cadena); break;
                 case 26: setClasificacion(Tipos.Cadena); break;
                 case 28: setClasificacion(Tipos.OperadorFactor); break;
+                case 29: setClasificacion(Tipos.Comentario); break;
+                case 30: setClasificacion(Tipos.Comentario); break;
+                case 31: setClasificacion(Tipos.Comentario); break;
+                case 32: setClasificacion(Tipos.IniLlave); break;
+                case 33: setClasificacion(Tipos.FinLlave); break;
                 case 27: setClasificacion(Tipos.Caracter); break;
                 
             }
@@ -175,7 +180,14 @@ namespace LYA1_Lexico3
             }
             if (estado == E)
             {
-                throw new Error("Lexico: Se espera un digito",log);
+                if(char.IsDigit(c))
+                {
+                    throw new Error("Lexico: Se espera un digito",log);
+                }
+            }
+            else
+            {
+                throw new Error("Lexico: Error de linea",log);
             }
             setContenido(buffer);
             log.WriteLine(getContenido() + " = " + getClasificacion());
