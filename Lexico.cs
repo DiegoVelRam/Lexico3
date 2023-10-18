@@ -153,9 +153,8 @@ namespace LYA1_Lexico3
                 case 31: setClasificacion(Tipos.Comentario); break;
                 case 32: setClasificacion(Tipos.IniLlave); break;
                 case 33: setClasificacion(Tipos.FinLlave); break;
-                case 27: setClasificacion(Tipos.Caracter); break;
-                
-            }
+                case 27: setClasificacion(Tipos.Caracter); break;   
+                            }
         }
         public void nextToken()
         {
@@ -187,10 +186,10 @@ namespace LYA1_Lexico3
                     throw new Error("Lexico: Se espera un digito",log);
                 }
             }
-            /*else
+            else
             {
                 throw new Error("Lexico: Error no se cerro cadena",log);
-            }*/
+            }
             setContenido(buffer);
             log.WriteLine(getContenido() + " = " + getClasificacion());
         }
