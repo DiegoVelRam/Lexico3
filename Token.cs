@@ -13,7 +13,6 @@ namespace LYA1_Lexico3
             OperadorRelacional/*==, !=, <=, >=, <,>  LISTO */,  OperadorLogico/*&&, ||, !  LISTO */    , OperadorTermino/* +,-  LISTO*/,  
             OperadorFactor/* /,*,% LISTO*/, IncrementoTermino/*++, --,+=,-= LISTO*/, IncrementoFactor/**=,/=,%= LISTO*/,  Cadena /*\"*/,  
             OperadorTernario /*?*/,Comentario /* // */, IniLlave /* { */,FinLlave /* } */,
-            
         }
         private string contenido;
         private Tipos  clasificacion;

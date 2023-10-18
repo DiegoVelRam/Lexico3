@@ -16,7 +16,7 @@ namespace LYA1_Lexico3
         private StreamReader archivo;
         private StreamWriter log;
 
-        int[,] TRAND =  
+        int[,] TRAND =
         {
         //  WS, L, D,  ., E(^),  +,  -,  =,  ;,  &,  |,  !,  >,  <,  %,  *,  ?,  ",  /,  {,  }, EOL, EOF, Lamda
             {0,  1, 2, 27,    1, 19, 20,  8, 10, 11, 12, 13, 16, 17, 22, 22, 24, 25, 28, 32, 33,  27,  27,   27},           //0
@@ -81,49 +81,49 @@ namespace LYA1_Lexico3
                 return 1;
             else if (char.IsAsciiDigit(c))
                 return 2;
-            else if (c=='.')
+            else if (c == '.')
                 return 3;
-            else if (c=='+')
+            else if (c == '+')
                 return 5;
-            else if (c=='-')
+            else if (c == '-')
                 return 6;
-            else if (c=='=')
+            else if (c == '=')
                 return 7;
-             else if (c==';')
+            else if (c == ';')
                 return 8;
-            else if (c=='&')
+            else if (c == '&')
                 return 9;
-            else if (c=='|')
+            else if (c == '|')
                 return 10;
-            else if (c=='!')
+            else if (c == '!')
                 return 11;
-            else if (c=='>')
+            else if (c == '>')
                 return 12;
-            else if (c=='<')
+            else if (c == '<')
                 return 13;
-            else if (c=='%')
-                return 14;    
-            else if (c=='*')
+            else if (c == '%')
+                return 14;
+            else if (c == '*')
                 return 15;
-            else if (c=='?')
+            else if (c == '?')
                 return 16;
-            else if (c=='"')
+            else if (c == '"')
                 return 17;
-            else if (c=='/')
+            else if (c == '/')
                 return 18;
-            else if (c=='{')
+            else if (c == '{')
                 return 19;
-            else if (c=='}')
+            else if (c == '}')
                 return 20;
-            else if (c=='\n')
+            else if (c == '\n')
                 return 0;
             else if (FinArchivo())
                 return 22;
             else
                 return 27;
-            
+
         }
-   private void clasificar(int estado)
+        private void clasificar(int estado)
         {
             switch (estado)
             {
@@ -131,7 +131,7 @@ namespace LYA1_Lexico3
                 case 2: setClasificacion(Tipos.Numero); break;
                 case 8: setClasificacion(Tipos.Asignacion); break;
                 case 9: setClasificacion(Tipos.OperadorRelacional); break;
-                case 10: setClasificacion(Tipos.FinSentencia);break;
+                case 10: setClasificacion(Tipos.FinSentencia); break;
                 case 11: setClasificacion(Tipos.Caracter); break;
                 case 12: setClasificacion(Tipos.Caracter); break;
                 case 13: setClasificacion(Tipos.OperadorLogico); break;
@@ -153,8 +153,8 @@ namespace LYA1_Lexico3
                 case 31: setClasificacion(Tipos.Comentario); break;
                 case 32: setClasificacion(Tipos.IniLlave); break;
                 case 33: setClasificacion(Tipos.FinLlave); break;
-                case 27: setClasificacion(Tipos.Caracter); break;   
-                            }
+                case 27: setClasificacion(Tipos.Caracter); break;
+            }
         }
         public void nextToken()
         {
@@ -167,28 +167,32 @@ namespace LYA1_Lexico3
             {
                 c = (char)archivo.Peek();
 
-                estado = TRAND[estado,columna(c)];
+                estado = TRAND[estado, columna(c)];
                 clasificar(estado);
-                
+
                 if (estado >= 0)
                 {
                     if (estado > 0)
                     {
-                        buffer += c;    
+                        buffer += c;
+                    }
+                    else
+                    {
+                        buffer = "";
                     }
                     archivo.Read();
                 }
             }
             if (estado == E)
             {
-              if(getClasificacion() == Tipos.Numero)
+                if (getClasificacion() == Tipos.Numero)
                 {
-                    throw new Error("Lexico: Se espera un digito",log);
+                    throw new Error("Lexico: Se espera un digito", log);
                 }
             }
             else
             {
-                throw new Error("Lexico: Error no se cerro cadena",log);
+                throw new Error("Lexico: Error no se cerro cadena", log);
             }
             setContenido(buffer);
             log.WriteLine(getContenido() + " = " + getClasificacion());
